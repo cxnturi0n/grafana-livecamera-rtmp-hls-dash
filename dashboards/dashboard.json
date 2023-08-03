@@ -1,0 +1,68 @@
+{
+  "annotations": {
+    "list": [
+      {
+        "builtIn": 1,
+        "datasource": {
+          "type": "grafana",
+          "uid": "-- Grafana --"
+        },
+        "enable": true,
+        "hide": true,
+        "iconColor": "rgba(0, 211, 255, 1)",
+        "name": "Annotations & Alerts",
+        "type": "dashboard"
+      }
+    ]
+  },
+  "editable": true,
+  "fiscalYearStartMonth": 0,
+  "graphTooltip": 0,
+  "id": 1,
+  "links": [],
+  "liveNow": false,
+  "panels": [
+    {
+      "datasource": {
+        "type": "datasource",
+        "uid": "grafana"
+      },
+      "gridPos": {
+        "h": 28,
+        "w": 10,
+        "x": 8,
+        "y": 0
+      },
+      "id": 1,
+      "options": {
+        "code": {
+          "language": "plaintext",
+          "showLineNumbers": false,
+          "showMiniMap": false
+        },
+        "content": "<!DOCTYPE html>\n<html>\n<head>\n  <link href=\"https://vjs.zencdn.net/8.3.0/video-js.css\" rel=\"stylesheet\" />\n</head>\n\n<body>\n  <video\n    id=\"my-video\"\n    class=\"video-js\"\n    controls\n    preload=\"auto\"\n    width=\"1000\"\n    height=\"1000\"\n    data-setup=\"{}\"\n    autoplay\n    muted\n  >\n    <source src=\"http://127.0.0.1:8088/hls/stream.m3u8\" type=\"application/x-mpegURL\"/>\n  </video>\n  <script src=\"https://vjs.zencdn.net/8.3.0/video.min.js\"></script>\n</body>\n</html>",
+        "mode": "markdown"
+      },
+      "pluginVersion": "10.0.3",
+      "title": "Live camera feed",
+      "type": "text"
+    }
+  ],
+  "refresh": "",
+  "schemaVersion": 38,
+  "style": "dark",
+  "tags": [],
+  "templating": {
+    "list": []
+  },
+  "time": {
+    "from": "now-6h",
+    "to": "now"
+  },
+  "timepicker": {},
+  "timezone": "",
+  "title": "LiveCameraDemoDashboard",
+  "uid": "b303f51a-4216-43f3-a57d-0e0d4e9a42bb",
+  "version": 2,
+  "weekStart": ""
+}
