@@ -14,7 +14,7 @@ To get started with the live camera feed dashboard, follow these steps:
 2. **Running the Dashboard:**
    - Use the provided `build_and_run.sh` script to build the Grafana container with the embedded live camera feed dashboard and run it seamlessly. 
 
-## Setting up streaming server
+## Setting up video streaming server
 
 If you do not already have an HLS or DASH server, you can create one using NGINX along with the NGINX RTMP module. Follow these steps:
 
