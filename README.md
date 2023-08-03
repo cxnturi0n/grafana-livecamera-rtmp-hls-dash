@@ -2,7 +2,7 @@
 
 ## Introduction
 
-This repository contains a simple Grafana dashboard that displays live camera feed using either the HLS (HTTP Live Streaming) or DASH (Dynamic Adaptive Streaming over HTTP) streaming protocols. The dashboard is embedded within the Grafana image. As not all browsers support the visualization of DASH and HLS streams natively, it was necessary to embed an HTML5 video player in the HTML panel of the dashboard. For that, the Video.js library was utilized so that the live camera feed could be played across different browsers and platforms without requiring the users to use specific extensions.
+This repository contains a simple Grafana dashboard that displays live camera feed using either the HLS (HTTP Live Streaming) or DASH (Dynamic Adaptive Streaming over HTTP) streaming protocols. The dashboard is embedded within the Grafana image provided. As not all browsers support the visualization of DASH and HLS streams natively, it was necessary to embed an HTML5 video player in the HTML panel of the dashboard. For that, the Video.js library was utilized so that the live camera feed could be played across different browsers and platforms without requiring the users to use specific extensions. 
 
 ## Getting Started
 
@@ -27,7 +27,8 @@ If you do not already have an HLS or DASH server, you can create one using NGINX
       ffmpeg -f v4l2 -i /dev/video0 -c:v libx264 -pix_fmt yuv420p -preset ultrafast -tune zerolatency -framerate 15 -g 30 -b:v 300k -f flv rtmp://localhost/live/stream
      ```
      Adjust the command according to your specific camera input and RTMP server configuration. 
-     
+		       
+
 ## Considerations
 
 Please note that the live camera feed provided has a latency ranging from 20 to 40 seconds. If you require a real-time, low-latency stream, it is recommended using other protocols like WebRTC (Web Real-Time Communication).
