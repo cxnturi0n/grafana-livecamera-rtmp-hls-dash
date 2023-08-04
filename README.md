@@ -12,7 +12,7 @@ https://github.com/cxnturi0n/grafana-live-camera-feed/assets/75443422/6ac3257e-d
 If you do not already have an HLS or DASH server, you can create one using NGINX along with the NGINX RTMP module. Follow these steps:
 
 1. **Install NGINX with RTMP Module and enable HLS and DASH:**
-   - Instructions can be found in this tutorial: [How to Set Up a Video Streaming Server using NGINX RTMP on Ubuntu 20.04](https://www.digitalocean.com/community/tutorials/how-to-set-up-a-video-streaming-server-using-nginx-rtmp-on-ubuntu-20-04).
+   - If you are on Ubuntu, instructions can be found in this tutorial(only steps 1 and 5 are strictly needed): [How to Set Up a Video Streaming Server using NGINX RTMP on Ubuntu 20.04](https://www.digitalocean.com/community/tutorials/how-to-set-up-a-video-streaming-server-using-nginx-rtmp-on-ubuntu-20-04).
 
 2. **Start Live Streaming:**
    - To start live streaming your camera, assuming it is on `/dev/video0` and the RTMP server is located at `localhost/live/stream`, you can use the following command:
