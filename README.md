@@ -29,7 +29,7 @@ To get started with the live camera feed dashboard, follow these steps:
    - You can customize the IP address of your http video streaming server by editing the `dashboards/dashboard.json` file, and substituting the 'content' tag with the content of 'dash.html' or 'hls.html' updating the IP address to match your server configuration. The ip can also be          changed directly from the dashboard panel.
 
 2. **Running the Dashboard:**
-   - Use the provided `build_and_run.sh` script to build the Grafana container with the embedded live camera feed dashboard and run it seamlessly. 
+   - Use the provided `build_and_run.sh` script to build the Grafana container with the embedded live camera feed dashboard and run it seamlessly. You can then open your web browser and access the dashboard by following this link: http://localhost:3000/dashboards.
 	       
 
 ## Considerations
