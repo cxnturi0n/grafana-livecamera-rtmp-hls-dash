@@ -9,7 +9,11 @@ https://github.com/cxnturi0n/grafana-live-camera-feed/assets/75443422/6ac3257e-d
 
 ## Setting up video streaming server
 
-If you do not already have an HLS or DASH server, you can create one using NGINX along with the NGINX RTMP module. Follow these steps:
+If you do not already have an HLS or DASH server, you can create one using NGINX along with the NGINX RTMP module. 
+
+![diagram](https://github.com/cxnturi0n/grafana-live-camera-feed/assets/75443422/6a7814b4-4f82-4df0-a7ef-80269b66efba)
+
+Follow these steps:
 
 1. **Install NGINX with RTMP Module and enable HLS and DASH:**
    - If you are on Ubuntu, instructions can be found in this tutorial (only steps 1 and 5 are strictly required): [How to Set Up a Video Streaming Server using NGINX RTMP on Ubuntu 20.04](https://www.digitalocean.com/community/tutorials/how-to-set-up-a-video-streaming-server-using-nginx-rtmp-on-ubuntu-20-04).
