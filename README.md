@@ -34,4 +34,4 @@ To get started with the live camera feed dashboard, follow these steps:
 
 ## Considerations
 
-Please note that the live camera feed provided has a latency up to 10 seconds. If you require a real-time, low-latency stream, it is recommended using other protocols like WebRTC (Web Real-Time Communication).
+Please note that the live camera feed provided has at least 10 seconds latency due to HLS and DASH constraints. If you require a real-time, low-latency stream, it is recommended using other protocols like WebRTC (Web Real-Time Communication).
