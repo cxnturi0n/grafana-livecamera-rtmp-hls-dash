@@ -1,5 +1,3 @@
-# Live Camera Feed Grafana Dashboard
-
 ## Introduction
 
 This repository contains a simple Grafana dashboard that displays live camera feed using either the HLS (HTTP Live Streaming) or DASH (Dynamic Adaptive Streaming over HTTP) streaming protocols. The dashboard is embedded within the Grafana image provided. As not all browsers support the visualization of DASH and HLS streams natively, it was necessary to embed an HTML5 video player in the HTML panel of the dashboard. For that, the Video.js library was utilized so that the live camera feed could be played across different browsers and platforms without requiring the users to use specific extensions. 
