@@ -4,8 +4,9 @@
 
 This repository contains a simple Grafana dashboard that displays live camera feed using either the HLS (HTTP Live Streaming) or DASH (Dynamic Adaptive Streaming over HTTP) streaming protocols. The dashboard is embedded within the Grafana image provided. As not all browsers support the visualization of DASH and HLS streams natively, it was necessary to embed an HTML5 video player in the HTML panel of the dashboard. For that, the Video.js library was utilized so that the live camera feed could be played across different browsers and platforms without requiring the users to use specific extensions. 
 
-https://github.com/cxnturi0n/grafana-live-camera-feed/assets/75443422/6ac3257e-d958-4353-8577-a2e7829dc0a3
+**Demo:** Grafana dashboard showing my home ip camera live feed.
 
+https://github.com/cxnturi0n/grafana-live-camera-feed/assets/75443422/2537b6b2-f327-4068-aa6f-98b4b4d8023c
 
 ## Setting up video streaming server
 
@@ -19,11 +20,15 @@ Follow these steps:
    - If you are on Ubuntu, instructions can be found in this tutorial (only steps 1 and 5 are strictly required): [How to Set Up a Video Streaming Server using NGINX RTMP on Ubuntu 20.04](https://www.digitalocean.com/community/tutorials/how-to-set-up-a-video-streaming-server-using-nginx-rtmp-on-ubuntu-20-04).
 
 2. **Start Live Streaming:**
-   - To start live streaming your camera, assuming it is on `/dev/video0` and the RTMP server is located at `localhost/live/stream`, you can use the following command:
+   - If you have an IP camera streaming over RTSP, you can use the following command to forward the stream to the RTMP server:
      ```bash
-      ffmpeg -f v4l2 -i /dev/video0 -c:v libx264 -pix_fmt yuv420p -preset ultrafast -tune zerolatency -framerate 15 -g 30 -b:v 300k -f flv rtmp://localhost/live/stream
+     ffmpeg -i "<rtsp-url>" -filter:v fps=fps=30 -crf 40 -preset ultrafast -vcodec libx264 -f flv "rtmp://localhost/live/stream"
+     ```     
+   - If you don't have an IP camera but want to try the dashboard with a camera, you can initiate live streaming, assuming the camera is connected to /dev/video0, using this command:
+     ```bash
+      ffmpeg -f v4l2 -i "/dev/video0" -c:v libx264 -pix_fmt yuv420p -preset ultrafast -tune zerolatency -framerate 15 -g 30 -b:v 300k -f flv "rtmp://localhost/live/stream"
      ```
-     Adjust the command according to your specific camera input and RTMP server configuration. 
+     Adjust the commands according to your specific camera input and RTMP server configuration. 
 
 ## Setting up dashboard
 
