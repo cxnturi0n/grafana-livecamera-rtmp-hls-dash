@@ -30,10 +30,10 @@ Follow these steps:
 
 ## Setting up dashboard
 
-To get started with the live camera feed dashboard, follow these steps:
+If you want to try the dashboard, follow these steps:
 
 1. **Modify the Server IP Address:**
-   - You can customize the IP address of your http video streaming server by editing the `dashboards/dashboard.json` file, and substituting the 'content' tag with the content of 'dash.html' or 'hls.html' updating the IP address to match your server configuration. The ip can also be          changed directly from the dashboard panel.
+   - Edit the `dashboards/dashboard.json` file, substituting the 'content' tag with the content of 'dash.html' or 'hls.html' updating the IP address to match your server configuration. The html content can also be changed directly from the dashboard panel.
 
 2. **Running the Dashboard:**
    - Use the provided `build_and_run.sh` script to build the Grafana container with the embedded live camera feed dashboard and run it seamlessly. You can then open your web browser and access the dashboard by following this link: http://localhost:3000/dashboards.
@@ -41,4 +41,4 @@ To get started with the live camera feed dashboard, follow these steps:
 
 ## Considerations
 
-Please note that the live camera feed provided has at least 10 seconds latency due to HLS and DASH constraints. If you require a real-time, low-latency stream, it is recommended using other protocols like WebRTC (Web Real-Time Communication).You can check this repo for a webrtc low latency solution : https://github.com/cxnturi0n/grafana-livecamera-webrtc.
+Please note that the live camera feed provided has at least 10 seconds latency due to HLS and DASH constraints. If you require a real-time, low-latency stream, it is recommended using other protocols like WebRTC (Web Real-Time Communication).You can check this repo for a webrtc low latency solution: https://github.com/cxnturi0n/grafana-livecamera-webrtc.
